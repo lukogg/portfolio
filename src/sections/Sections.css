@@ -1,0 +1,41 @@
+.section-intro {
+    /* background-image: url("./src/assets/background-intro.webp"); */
+    background-color: #101010;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.section-portfolio{
+    background-color: #000000;
+    min-height: calc(100vh - 80px);
+    color: white;
+}
+
+.section-footer {
+    background-color: black;
+    text-align: center;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    color: white;
+  }
+
+.section-divider{
+    background-color: white;
+    height: 0.1vh;
+}
+  
+.herobuttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }

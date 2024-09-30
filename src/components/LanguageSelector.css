@@ -1,0 +1,36 @@
+.language-selector {
+    display: flex;
+    gap: 0px; /* Space between buttons */
+}
+
+.flag-button {
+    background-color: transparent; /* Make the button transparent */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+    width: 50px; /* Set width for the button */
+    height: 50px; /* Set height for the button */
+    border-radius: 50%; /* Make the button round */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease-out, filter 0.5s;
+}
+
+.flag-button:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.flag-icon {
+    width: 100%; /* Set flag size to fill button */
+    height: 100%; /* Set height to fill button */
+    border-radius: 50%; /* Make the flag icon round */
+}
+
+.active {
+    filter: none; /* Default state for active button */
+}
+
+.inactive {
+    filter: grayscale(100%); /* Black and white for inactive state */
+}

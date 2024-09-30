@@ -1,0 +1,23 @@
+.header {
+    transition: transform 0.3s ease-in-out;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 10px 20px;
+    width: 100%;
+    min-height: 80px;
+    position: sticky;
+    top: 0;
+    color: white;
+    z-index: 50;
+  }
+  
+  .hidden {
+      transform: translateY(-100%); /* Move the header out of view */
+  }
+  
+  .visible {
+      transform: translateY(0); /* Reset to original position */
+  }
+  
