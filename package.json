@@ -2,7 +2,7 @@
   "name": "Portfolio Page",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://github.com/lukogg/portfolio",
+  "homepage": "https://lukogg.github.io/portfolio",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
@@ -19,9 +19,9 @@
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18.3.1",
-    "react-flag-icon-css": "^1.0.25",
     "react-i18next": "^15.0.2",
-    "react-icons": "^5.3.0"
+    "react-icons": "^5.3.0",
+    "react-router-dom": "^6.26.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
