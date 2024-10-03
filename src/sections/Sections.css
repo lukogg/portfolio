@@ -1,6 +1,7 @@
 .section-intro {
     /* background-image: url("./src/assets/background-intro.webp"); */
-    background-image: url("./src/assets/bg-anim-intro.svg");
+    background-image: url("./src/assets/background-intro.svg");
+    /* background-image: url("./src/assets/bg-anim-intro.svg"); */
     /* background-color: #101010; */
     background-size: cover;
     background-position: center;
