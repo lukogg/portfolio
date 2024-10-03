@@ -6,10 +6,10 @@ function SectionIntro() {
     const{ t } = useTranslation();
 
   return (
-    <div className="section-intro">
+    <div className="section-intro moving-gradient">
       <h1 className=''>{t('Intro_h1')}</h1>
       <h2 className='' style={{color:'#ffffff70'}}>{t('Intro_h2')}</h2>
-      <div className='herobuttons' style={{ marginTop: '1rem' }}>
+      <div className='herobuttons dropshadow' style={{ marginTop: '1rem' }}>
         <ViewPortfolioButton />
         <CVButton />
       </div>

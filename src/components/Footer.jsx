@@ -10,21 +10,22 @@ function Footer() {
   
   return (
     <footer className="footer" style={{padding: '1rem'}}>
+      <div>
       <strong >
         {t('Contact')}
       </strong>
       <div>
       <div>
-        <a href={links['Telegram-footer-link']} className='link-white-blue' style={{ display: 'flex', alignItems: 'center'}}>
+        <a href={links['Telegram-footer-link']} className='link-white-blue' style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
           <FaTelegramPlane style={{ marginRight: '0.5rem', }} />
-          {links['Telegram-footer-tag']}
-        </a>
+            Telegram</a>
       </div>
       <div>
-        <a href={`mailto:${links['Email']}`} className='link-white-blue' style={{ display: 'flex', alignItems: 'center' }}>
+        <a href={`mailto:${links['Email']}`} className='link-white-blue' style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
           <FaEnvelope style={{ marginRight: '0.5rem' }} />
-          {links['Email']}
+          Email
         </a>
+      </div>
       </div>
       </div>
     </footer>

@@ -1,9 +1,8 @@
 .section-intro {
     /* background-image: url("./src/assets/background-intro.webp"); */
-    background-image: url("./src/assets/background-intro.svg");
+    /* background-image: url("./src/assets/bg_intro.jpg"); */
+    background-image: url(/assets/background-intro.svg);
     /* background-image: url("./src/assets/bg-anim-intro.svg"); */
-    /* background-color: #101010; */
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
@@ -12,6 +11,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: movingGradientIntro 8s ease infinite;
+}
+
+.moving-gradient {
+    background: linear-gradient(-45deg,#f7258595, #4361ee95, #4cc9f095); /* Multiple colors */
+    background-size: 400% 400%; /* Large background size for smoother movement */
+    animation: moveGradient 15s ease infinite; /* Animate the gradient */
+    min-height: 100vh; /* Full screen */
+  }
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+        background: linear-gradient(-45deg);
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+        background: linear-gradient(-405deg);
+      }
 }
   
 .section-portfolio {

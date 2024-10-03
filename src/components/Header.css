@@ -11,7 +11,8 @@
     top: 0;
     color: white;
     z-index: 50;
-  }
+    filter: drop-shadow(10px 5px 10px black);
+}
   
 .hidden {
     transform: translateY(-100%); /* Move the header out of view */
