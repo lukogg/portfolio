@@ -1,5 +1,5 @@
 {
-    "HeaderText": "Ростислав Симоненко",
+    "HeaderText": "Симоненко",
     "Intro_h1": "Привіт, я Ростислав",
     "Intro_h2": "Ласкаво прошу до мого портфоліо",
     "Button1": "Переглянути портфоліо",
@@ -7,5 +7,19 @@
     "CVLang1": "Англійською",
     "CVLang2": "Українською",
     "Contact": "Зв'язатись: ",
-    "Email": "symonenkorostyslav@gmail.com"
+    "PortfolioTitleMain": "Motion Портфоліо",
+    "PortfolioTitlePromo": "Промо Відео",
+    "PortfolioTitleLooped": "Зациклені Відео",
+    "CardTitle1": "FEVRAL BEATS 2.0",
+    "CardDesc1": "Промо-відео для оновлення сервісу продажу музики \n\nМій вклад: \nІдея та виробництво з нуля.",
+    "CardButton1": "Дивитися на YouTube",
+    "CardTitle2": "FEVRAL BEATS 2.1",
+    "CardDesc2": "Промо-відео для оновлення сервісу продажу музики \n\nМій вклад: \nІдея та виробництво з нуля.",
+    "CardButton2": "Дивитися на YouTube",
+    "CardTitle3": "FEVRAL BEATS 2.2",
+    "CardDesc3": "Промо-відео для оновлення сервісу продажу музики \n\nМій вклад: \nІдея та виробництво з нуля.",
+    "CardButton3": "Дивитися на YouTube",
+    "CardTitle4": "Title 4",
+    "CardDesc4": "Description 4",
+    "CardButton4": "Button 4"
   }

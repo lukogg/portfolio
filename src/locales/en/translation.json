@@ -1,5 +1,5 @@
 {
-    "HeaderText": "Rostyslav Symonenko",
+    "HeaderText": "Symonenko",
     "Intro_h1": "Hello, I am Rostyslav",
     "Intro_h2": "Welcome to my portfolio page",
     "Button1": "View Portfolio",
@@ -7,5 +7,21 @@
     "CVLang1": "English",
     "CVLang2": "Ukrainian",
     "Contact": "Contact me: ",
+    "PortfolioTitleMain": "Motion Portfolio",
+    "PortfolioTitlePromo": "Promo Videos",
+    "PortfolioTitleLooped": "Looped Videos",
+    "CardTitle1": "FEVRAL BEATS 2.0",
+    "CardDesc1": "Promo video for music selling service update \n\nMy impact: \nIdea and production from scratch.",
+    "CardButton1": "Watch on YouTube",
+    "CardTitle2": "FEVRAL BEATS 2.1",
+    "CardDesc2": "Promo video for music selling service update \n\nMy impact: \nIdea and production from scratch.",
+    "CardButton2": "Watch on YouTube",
+    "CardTitle3": "FEVRAL BEATS 2.2",
+    "CardDesc3": "Promo video for music selling service update \n\nMy impact: \nIdea and production from scratch.",
+    "CardButton3": "Watch on YouTube",
+    "CardTitle4": "Title 4",
+    "CardDesc4": "Description 4",
+    "CardButton4": "Button 4",
+    "Telegram": "@luko_gg",
     "Email": "symonenkorostyslav@gmail.com"
   }

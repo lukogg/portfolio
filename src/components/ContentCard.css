@@ -1,0 +1,55 @@
+/* ContentCard.css */
+
+.card-container {
+    display: flex;
+    justify-content: center; /* Center the cards in the container */
+    padding: 1rem;
+    flex-wrap: wrap; /* Allow wrapping of cards */
+    gap: 1rem; /* Use gap for uniform spacing */
+}
+
+.contentcard, .contentcard-promo, .contentcard-loop {
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    color: white;
+    padding: 1rem;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    flex: 1 1 calc(33.333% - 2rem); /* 3 cards per row */
+    max-width: calc(33.333% - 2rem); /* Ensures maximum 3 per row */
+    margin: 0; /* Remove individual margins */
+}
+
+.card:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.5);
+    transform: scale(1.01);
+}
+
+/* When screen width is less than or equal to 1024px */
+@media (max-width: 1024px) {
+    .contentcard, .contentcard-promo, .contentcard-loop {
+        flex: 1 1 calc(50% - 2rem); /* 2 cards per row */
+        max-width: calc(50% - 2rem);
+    }
+
+    /* Center the third card if there are 3 cards */
+    .card-container > :nth-child(odd):last-child {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* When screen width is less than or equal to 768px */
+@media (max-width: 768px) {
+    .contentcard, .contentcard-promo, .contentcard-loop {
+        flex: 1 1 calc(100% - 1rem); /* 1 card per row */
+        max-width: calc(100% - 1rem);
+    }
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

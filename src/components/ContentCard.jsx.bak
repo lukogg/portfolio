@@ -1,0 +1,78 @@
+import React, { useRef } from 'react';
+import "./ContentCard.css";
+import VideoToJPG from "../VideoToJPG.jsx";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import { useTranslation } from 'react-i18next';
+import placeholder from '../assets/S_Logo_White.svg';
+import { media1, media2, media3, media4, media5, media6 } from '../assets/media';
+
+const mediaArray = [media1, media2, media3, media4, media5, media6]; // Create an array for easy access
+
+function ContentCard({ id, className = 'contentcard'}) {
+  const { t } = useTranslation();
+  const videoRef = useRef(null); // Create a ref for the video element
+
+  const titleKey = `CardTitle${id}`;
+  const descKey = `CardDesc${id}`;
+  const buttonKey = `CardButton${id}`;
+
+  const media = mediaArray[id - 1]; // Get the media for the current card
+  
+  const isVideo = media && media.endsWith('.mp4'); // Check if the media is a video
+
+  // Handle mouse enter and leave events to play/pause the video
+  const handleMouseEnter = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0; // Reset video to start
+    }
+  };
+
+  return (
+    <Card 
+      className={className} 
+      style={{ width: '18rem' }}
+      onMouseEnter={handleMouseEnter} // Play video on hover
+      onMouseLeave={handleMouseLeave} // Pause video on mouse leave
+    >
+      {/* Conditional rendering for video or image */}
+      {isVideo ? (
+        <>
+          <video
+            ref={videoRef}
+            src={media}
+            style={{ display: 'none' }} // Hide the video element
+            onLoadedMetadata={() => {
+              // Load video metadata and set the current time
+              videoRef.current.currentTime = 1; // Start 1 second in
+            }}
+          />
+          <VideoToJPG videoSource={media} /> {/* Show thumbnail */}
+        </>
+      ) : (
+        <Card.Img variant="top" src={media || placeholder} alt={`Media for card ${id}`} />
+      )}
+
+      <Card.Body>
+        <Card.Title>{t(titleKey)}</Card.Title>
+        <Card.Text>
+          {t(descKey).split('\n').map((line, index) => (
+            <span key={index}>{line}<br /></span>
+          ))}
+        </Card.Text>
+        <Button variant="primary" style={{textAlign: 'center', margin: 'auto', display: 'block'}}>
+          {t(buttonKey)}
+        </Button>
+      </Card.Body>
+    </Card>
+  );
+}
+
+export default ContentCard;

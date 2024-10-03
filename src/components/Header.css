@@ -13,11 +13,46 @@
     z-index: 50;
   }
   
-  .hidden {
-      transform: translateY(-100%); /* Move the header out of view */
+.hidden {
+    transform: translateY(-100%); /* Move the header out of view */
+}
+
+.visible {
+    transform: translateY(0); /* Reset to original position */
+}
+
+.htext{
+    font-size: 24px;
+    color: white;
+    
   }
+
+.htitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.animated-line {
+    stroke-dasharray: 38; /* The total length of the line (44 - 6) */
+    stroke-dashoffset: 38;
+    animation: drawLine 2s ease-out forwards;
+    transform-origin: center;
+    transform: scaleY(0); /* Initial scale 0 */
+}
   
-  .visible {
-      transform: translateY(0); /* Reset to original position */
-  }
-  
+@keyframes drawLine {
+0% {
+    stroke-dashoffset: 38; /* Start from the total length (line hidden) */
+    transform: scaleY(0); /* Start from 0 scale */
+}
+50% {
+    stroke-dashoffset: 0;
+    transform: scaleY(1); /* Reveal from the center */
+}
+100% {
+    stroke-dashoffset: 0;
+    transform: scaleY(1); /* Fully visible */
+}
+}
