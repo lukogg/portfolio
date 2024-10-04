@@ -7,21 +7,20 @@ import { useTranslation } from 'react-i18next';
 import placeholder from '../assets/S_Logo_White.svg';
 import { media1, media2, media3, media4, media5, media6 } from '../assets/media';
 
-const mediaArray = [media1, media2, media3, media4, media5, media6]; // Create an array for easy access
+const mediaArray = [media1, media2, media3, media4, media5, media6];
 
-function ContentCard({ id, className = 'contentcard'}) {
+function ContentCard({ id, className = 'contentcard', href, noButton }) {
   const { t } = useTranslation();
-  const videoRef = useRef(null); // Create a ref for the video element
+  const videoRef = useRef(null);
 
   const titleKey = `CardTitle${id}`;
   const descKey = `CardDesc${id}`;
   const buttonKey = `CardButton${id}`;
 
-  const media = mediaArray[id - 1]; // Get the media for the current card
+  const media = mediaArray[id - 1];
   
-  const isVideo = media && media.endsWith('.mp4'); // Check if the media is a video
+  const isVideo = media && media.endsWith('.mp4');
 
-  // Handle mouse enter and leave events to play/pause the video
   const handleMouseEnter = () => {
     if (videoRef.current) {
       videoRef.current.play();
@@ -31,7 +30,6 @@ function ContentCard({ id, className = 'contentcard'}) {
   const handleMouseLeave = () => {
     if (videoRef.current) {
       videoRef.current.pause();
-      videoRef.current.currentTime = 0; // Reset video to start
     }
   };
 
@@ -39,22 +37,21 @@ function ContentCard({ id, className = 'contentcard'}) {
     <Card 
       className={className} 
       style={{ width: '18rem' }}
-      onMouseEnter={handleMouseEnter} // Play video on hover
-      onMouseLeave={handleMouseLeave} // Pause video on mouse leave
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      {/* Conditional rendering for video or image */}
       {isVideo ? (
         <>
           <video
             ref={videoRef}
             src={media}
-            style={{ display: 'none' }} // Hide the video element
+            style={{ display: 'none' }}
             onLoadedMetadata={() => {
-              // Load video metadata and set the current time
-              videoRef.current.currentTime = 1; // Start 1 second in
+
+              videoRef.current.currentTime = 0;
             }}
           />
-          <VideoToJPG videoSource={media} /> {/* Show thumbnail */}
+          <VideoToJPG videoSource={media} />
         </>
       ) : (
         <Card.Img variant="top" src={media || placeholder} alt={`Media for card ${id}`} />
@@ -67,9 +64,11 @@ function ContentCard({ id, className = 'contentcard'}) {
             <span key={index}>{line}<br /></span>
           ))}
         </Card.Text>
-        <Button variant="primary" style={{textAlign: 'center', margin: 'auto', display: 'block'}}>
+        {noButton ? null : (
+        <Button href={href} target="_blank" variant="primary" style={{textAlign: 'center', margin: 'auto', display: 'block'}}>
           {t(buttonKey)}
         </Button>
+        )}
       </Card.Body>
     </Card>
   );

@@ -22,13 +22,20 @@ function SectionPortfolio() {
             <ContentCard id="2" className='card contentcard-promo' href={links['Promo2.1-yt']} />
             <ContentCard id="3" className='card contentcard-promo' href={links['Promo2.2-yt']} />
           </div>
-      {/* <div className='h1' style={{fontSize: '60px', textAlign:'center'}}>
+      <div className='h1' style={{fontSize: '60px', textAlign:'center'}}>
       {t('PortfolioTitleLooped')}
       </div>
-          <div className="card-container" style={{marginBottom: '2rem'}}>
-            <ContentCard id="4" className='card contentcard-loop' noButton/>
-            <ContentCard id="5" className='card contentcard-loop' />
-          </div> */}
+          <div className="card-container" style={{marginBottom: '2rem', gap: '3rem'}}>
+            <ContentCard id="4" className='card contentcard-loop' noButton noDescription/>
+            <ContentCard id="5" className='card contentcard-loop' noButton noDescription/>
+      </div>
+      <div className='h1' style={{fontSize: '60px', textAlign:'center'}}>
+      {t('PortfolioTitleMisc')}
+      </div>
+          <div className="card-container" style={{marginBottom: '2rem', gap: '3rem'}}>
+            <ContentCard id="6" className='card contentcard-loop' noButton noDescription/>
+            {/* <ContentCard id="5" className='card contentcard-loop' noButton noDescription/> */}
+      </div>
     </div>
   );
 }

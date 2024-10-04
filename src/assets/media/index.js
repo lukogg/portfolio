@@ -3,7 +3,8 @@ import media2 from "./2.jpg";
 import media3 from "./3.jpg";
 import media4 from "./Dezee.mp4";
 import media5 from "./Devi.mp4";
-import media6 from "./Beznal.mp4";
+import media6 from "./ZNMA_Presents.mp4";
+import media7 from "./Beznal.mp4";
 
 export {
   media1,
@@ -12,4 +13,5 @@ export {
   media4,
   media5,
   media6,
+  media7,
 };

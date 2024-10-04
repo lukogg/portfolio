@@ -10,6 +10,7 @@
     "PortfolioTitleMain": "Motion Portfolio",
     "PortfolioTitlePromo": "Promo Videos",
     "PortfolioTitleLooped": "Looped Videos",
+    "PortfolioTitleMisc": "Misc. Videos",
     "CardTitle1": "FEVRAL BEATS 2.0",
     "CardDesc1": "Promo video for music selling service update \n\nMy impact: \nIdea and production from scratch.",
     "CardButton1": "Watch on YouTube",
@@ -19,9 +20,12 @@
     "CardTitle3": "FEVRAL BEATS 2.2",
     "CardDesc3": "Promo video for music selling service update \n\nMy impact: \nIdea and production from scratch.",
     "CardButton3": "Watch on YouTube",
-    "CardTitle4": "Title 4",
+    "CardTitle4": "Looped Avatar Animation Dezee",
     "CardDesc4": "Description 4",
-    "CardButton4": "Button 4",
+    "CardTitle5": "Looped Avatar Animation Devi",
+    "CardDesc5": "Description 5",
+    "CardTitle6": "Snippet for Instagram",
+    "CardDesc6": "Description 6",
     "Telegram": "@luko_gg",
     "Email": "symonenkorostyslav@gmail.com"
   }
